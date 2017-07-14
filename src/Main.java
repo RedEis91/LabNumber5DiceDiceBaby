@@ -1,9 +1,6 @@
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Random;
 import java.util.Scanner;
-
-
 public class Main {
     public static void main (String[] args) {
         System.out.println("Hey big baller, welcome to the world series of dice!");
@@ -27,11 +24,10 @@ public class Main {
         System.out.println("A pair of " + sides + " sided dice rolling...");
         System.out.println("...rolling...");
         System.out.println("...rolling...");
-        // randGen.nextInt(6) yields 0, 1, 2, 3, 4, or 5
-        // so + 1 makes that 1, 2, 3, 4, 5, or 6
         System.out.println(" ");
         System.out.println(" ");
         System.out.println("Roll " + roll + ":");
+        //random number generator
         System.out.println(randGen.nextInt((sides)) + 1);
         System.out.println(randGen.nextInt((sides2)) + 1);
         if ((randGen.nextInt((sides)) + 1) == 1 && (randGen.nextInt((sides2)) + 1) == 1)
