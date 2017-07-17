@@ -11,13 +11,18 @@ public class Main {
         String cont = " ";
         System.out.println("How many sides on your pair o' bones?");
         sides = scan.nextInt();
+        int sides2 = sides;
         //clearing enter from scanner
         scan.nextLine();
-        int sides2 = sides;
+        System.out.println("Roll dice? (y/n)");
+        cont = scan.nextLine();
+        System.out.println(cont);
+        if (cont.contains("y") || cont.contains("Y")) {
         do {
             contin = diceDiceBaby(sides, sides2, scan, cont, roll);
-
-        } while (contin);
+        } while (contin); } else {
+            System.out.println("See ya!");
+        }
     }
     public static boolean diceDiceBaby (int sides, int sides2, Scanner scan, String cont, int roll) {
         Random randGen = new Random();  // New random number generator
@@ -35,9 +40,7 @@ public class Main {
             System.out.println("Snake eyes!");
         }
         System.out.print("Roll again? (y/n)");
-        System.out.println(cont);
         cont = scan.nextLine();
-        System.out.println(cont);
         if (cont.contains("y") || cont.contains("Y"))
         {
             System.out.println("Let's go!");
